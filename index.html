@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUMIA | 不登校・家庭支援</title>
+  <meta name="description" content="不登校のお子さまを持つ保護者の方へ。LUMIAは家庭ごと支える不登校・家庭支援サービスです。初回無料相談受付中。">
   <style>
     :root{
       --bg-top:#dff3ff;
@@ -34,6 +35,9 @@
 
       --radius:20px;
       --max:860px;
+
+      /* Topbar height token — used to offset banner */
+      --topbar-h:48px;
     }
 
     *{box-sizing:border-box}
@@ -58,27 +62,27 @@
       position:fixed;
       inset:0;
       pointer-events:none;
-      background:
-        radial-gradient(circle at 50% 100%, rgba(255,255,255,.82) 0%, rgba(255,255,255,0) 34%);
+      background:radial-gradient(circle at 50% 100%, rgba(255,255,255,.82) 0%, rgba(255,255,255,0) 34%);
       z-index:0;
     }
 
     a{color:inherit}
 
-    .container{
-      position:relative;
-      z-index:1;
-      max-width:var(--max);
-      margin:0 auto;
-      padding:24px 18px 44px;
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
     }
 
+    /* ─── Topbar ─────────────────────────────── */
     .topbar{
       position:sticky;
       top:0;
       z-index:30;
-      background:rgba(255,255,255,.7);
+      height:var(--topbar-h);
+      background:rgba(255,255,255,.75);
       backdrop-filter:saturate(180%) blur(14px);
+      -webkit-backdrop-filter:saturate(180%) blur(14px);
       border-bottom:1px solid rgba(255,255,255,.55);
       box-shadow:0 6px 20px rgba(31,79,167,.05);
     }
@@ -86,7 +90,8 @@
     .topbar-inner{
       max-width:var(--max);
       margin:0 auto;
-      padding:12px 14px;
+      height:100%;
+      padding:0 14px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -100,6 +105,7 @@
       text-shadow:0 1px 0 rgba(255,255,255,.6);
     }
 
+    /* ─── Buttons ────────────────────────────── */
     .btn,
     .cta{
       display:inline-flex;
@@ -110,21 +116,79 @@
       cursor:pointer;
       transition:.22s ease;
       font-weight:800;
+      min-height:52px;
+      touch-action:manipulation;
     }
 
     .btn:hover,
-    .cta:hover{
-      transform:translateY(-1px);
+    .cta:hover{transform:translateY(-1px)}
+
+    .btn:focus,
+    .cta:focus,
+    a:focus{
+      outline:3px solid rgba(47,103,200,.22);
+      outline-offset:2px;
     }
 
+    .btn-primary{
+      background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+      color:#fff;
+      padding:16px 20px;
+      border-radius:16px;
+      box-shadow:0 14px 28px rgba(201,137,31,.22);
+      font-size:16px;
+      flex:1 1 220px;
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.82);
+      color:var(--blue-deep);
+      padding:16px 20px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.6);
+      font-size:16px;
+      box-shadow:var(--shadow-soft);
+      backdrop-filter:blur(8px);
+      flex:1 1 220px;
+    }
+
+    /* ─── Container ──────────────────────────── */
+    .container{
+      position:relative;
+      z-index:1;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:16px 14px 34px;
+      /* Safe area for notched iPhones */
+      padding-bottom:calc(34px + env(safe-area-inset-bottom));
+    }
+
+    /* ─── Hero Banner ────────────────────────── */
+    .hero-banner{
+      /* Push banner below sticky topbar so it never overlaps */
+      margin:0 0 18px;
+      overflow:hidden;
+      border-radius:18px;
+      box-shadow:var(--shadow-soft);
+      background:#e8f4ff; /* fallback if banner.jpg missing */
+      min-height:80px;    /* placeholder height */
+    }
+
+    .hero-banner img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    /* ─── Hero Card ──────────────────────────── */
     .hero{
       position:relative;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.82) 0%, rgba(255,255,255,.68) 100%);
+      background:linear-gradient(180deg, rgba(255,255,255,.82) 0%, rgba(255,255,255,.68) 100%);
       backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
       border:1px solid rgba(255,255,255,.55);
       border-radius:30px;
-      padding:30px 22px;
+      padding:24px 16px;
       box-shadow:var(--shadow);
       overflow:hidden;
     }
@@ -132,10 +196,8 @@
     .hero::before{
       content:"";
       position:absolute;
-      top:-30px;
-      right:-30px;
-      width:180px;
-      height:180px;
+      top:-30px; right:-30px;
+      width:180px; height:180px;
       border-radius:50%;
       background:radial-gradient(circle, rgba(255,223,150,.55) 0%, rgba(255,223,150,0) 72%);
       pointer-events:none;
@@ -144,27 +206,11 @@
     .hero::after{
       content:"";
       position:absolute;
-      left:-40px;
-      bottom:-50px;
-      width:220px;
-      height:220px;
+      left:-40px; bottom:-50px;
+      width:220px; height:220px;
       border-radius:50%;
       background:radial-gradient(circle, rgba(114,182,255,.18) 0%, rgba(114,182,255,0) 72%);
       pointer-events:none;
-    }
-
-    .hero-logo{
-      text-align:center;
-      margin-bottom:16px;
-    }
-
-    .hero-logo img{
-      width:110px;
-      max-width:32vw;
-      border-radius:50%;
-      box-shadow:0 12px 28px rgba(230,162,60,.18);
-      border:3px solid rgba(255,255,255,.7);
-      background:#fff;
     }
 
     .eyebrow{
@@ -181,7 +227,7 @@
     }
 
     h1{
-      font-size:clamp(30px, 5vw, 46px);
+      font-size:clamp(28px, 8vw, 46px);
       line-height:1.4;
       margin:0 0 16px;
       letter-spacing:-0.02em;
@@ -190,7 +236,7 @@
     }
 
     h2{
-      font-size:22px;
+      font-size:20px;
       line-height:1.5;
       margin:0 0 14px;
       letter-spacing:-0.01em;
@@ -205,30 +251,12 @@
     }
 
     .lead{
-      font-size:16px;
+      font-size:15px;
       line-height:1.95;
       margin:0 0 12px;
     }
 
     .muted{color:var(--muted)}
-
-    .hero-points{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:12px;
-      margin:18px 0 0;
-    }
-
-    .mini-card{
-      background:rgba(255,255,255,.82);
-      border:1px solid rgba(255,255,255,.65);
-      border-radius:16px;
-      padding:14px;
-      box-shadow:var(--shadow-soft);
-      font-size:14px;
-      line-height:1.8;
-      backdrop-filter:blur(8px);
-    }
 
     .hero-actions{
       display:flex;
@@ -237,28 +265,7 @@
       margin-top:22px;
     }
 
-    .btn-primary{
-      background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
-      color:#fff;
-      padding:16px 20px;
-      border-radius:16px;
-      box-shadow:0 14px 28px rgba(201,137,31,.22);
-      font-size:16px;
-      min-width:220px;
-    }
-
-    .btn-secondary{
-      background:rgba(255,255,255,.82);
-      color:var(--blue-deep);
-      padding:16px 20px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.6);
-      font-size:16px;
-      min-width:220px;
-      box-shadow:var(--shadow-soft);
-      backdrop-filter:blur(8px);
-    }
-
+    /* ─── Sections ───────────────────────────── */
     .section{margin-top:30px}
 
     .panel{
@@ -318,6 +325,7 @@
 
     li{margin:8px 0}
 
+    /* ─── Flow Steps ─────────────────────────── */
     .flow{
       display:grid;
       gap:12px;
@@ -372,6 +380,7 @@
       border:1px solid rgba(47,103,200,.08);
     }
 
+    /* ─── Profile ────────────────────────────── */
     .profile{
       display:grid;
       gap:12px;
@@ -392,6 +401,7 @@
       box-shadow:var(--shadow-soft);
     }
 
+    /* ─── FAQ ────────────────────────────────── */
     .faq{display:grid; gap:10px; margin-top:14px}
 
     .faq-item{
@@ -403,6 +413,7 @@
       backdrop-filter:blur(8px);
     }
 
+    /* ─── CTA Section ────────────────────────── */
     .cta-section{
       margin-top:34px;
       background:linear-gradient(180deg, rgba(255,255,255,.88) 0%, rgba(255,251,240,.86) 100%);
@@ -414,18 +425,29 @@
       backdrop-filter:blur(10px);
     }
 
-    .cta{
-      display:block;
+    /* LINE button inside CTA section */
+    .cta-section .cta-line-btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
       width:100%;
       background:linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
       color:#fff;
       text-align:center;
-      padding:18px 18px;
+      padding:18px;
       border-radius:16px;
       font-size:17px;
+      font-weight:800;
       box-shadow:0 14px 28px rgba(47,103,200,.25);
       margin-top:16px;
+      text-decoration:none;
+      transition:.22s ease;
+      min-height:52px;
+      touch-action:manipulation;
     }
+
+    .cta-section .cta-line-btn:hover{transform:translateY(-1px)}
 
     .cta-sub{
       text-align:center;
@@ -435,19 +457,38 @@
       line-height:1.7;
     }
 
+    /* ─── Sticky CTA ─────────────────────────── */
     .sticky-cta{
       position:sticky;
-      bottom:12px;
+      bottom:10px;
+      bottom:calc(10px + env(safe-area-inset-bottom));
       z-index:20;
       margin-top:22px;
     }
 
-    .sticky-cta .cta{
-      margin-top:0;
+    .sticky-cta a{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      width:100%;
       background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+      color:#fff;
+      text-align:center;
+      padding:18px;
+      border-radius:16px;
+      font-size:17px;
+      font-weight:800;
       box-shadow:0 14px 28px rgba(201,137,31,.22);
+      text-decoration:none;
+      transition:.22s ease;
+      min-height:52px;
+      touch-action:manipulation;
     }
 
+    .sticky-cta a:hover{transform:translateY(-1px)}
+
+    /* ─── Footer ─────────────────────────────── */
     .footer-note{
       margin-top:18px;
       font-size:12px;
@@ -458,49 +499,35 @@
 
     .small{font-size:13px}
 
+    .footer-note a{
+      color:#5f6f86;
+      font-size:13px;
+      text-decoration:none;
+    }
+
+    .footer-note a:hover{
+      text-decoration:underline;
+      color:#2f67c8;
+    }
+
+    /* ─── Responsive ─────────────────────────── */
     @media (max-width:760px){
-      .hero-points,.grid-2,.grid-3{grid-template-columns:1fr}
+      .grid-2,.grid-3{grid-template-columns:1fr}
       .profile{grid-template-columns:1fr}
       .avatar{width:88px;height:88px;border-radius:20px}
     }
 
     @media (max-width:640px){
-      .container{padding:16px 14px 34px}
-      .hero{padding:24px 16px}
-      .topbar-inner{padding:10px 12px}
+      .container{padding:14px 14px 34px}
+      .hero{padding:22px 16px}
       .btn-primary,.btn-secondary{width:100%}
-      .sticky-cta{bottom:10px}
+      h2{font-size:19px}
+      .lead{font-size:15px}
     }
-    .footer-note a{
-  color:#5f6f86;
-  font-size:13px;
-  text-decoration:none;
-}
-
-.footer-note a:hover{
-  text-decoration:underline;
-  color:#2f67c8;
-}
-@media (max-width: 768px) {
-  .container {
-    padding: 0;   /* ←横の余白も消す */
-  }
-
-  .hero-banner {
-    margin: 0;
-    padding: 0;
-  }
-
-  .hero-banner img {
-    width: 100%;
-    max-height: 110px;  /* ←ちょうどいいサイズ */
-    object-fit: cover;
-    border-radius: 0;   /* ←角丸も消す */
-  }
-}
   </style>
 </head>
 <body>
+
 <header class="topbar">
   <div class="topbar-inner">
     <div class="brand">LUMIA</div>
@@ -509,28 +536,31 @@
 
 <div class="container">
 
+  <!-- Banner: sits below topbar with gap from container padding -->
   <section class="hero-banner">
-    <img src="banner.jpg" alt="LUMIAバナー" class="hero-banner-image">
+    <img src="banner.jpg" alt="LUMIAバナー" loading="lazy">
   </section>
 
-  <div class="eyebrow">
-    中学生のお子さまを持つ保護者の方へ / 不登校・家庭支援
-  </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="eyebrow">
+      中学生のお子さまを持つ保護者の方へ / 不登校・家庭支援
+    </div>
 
-  <h1>
-    「どう関わればいいのか分からない」<br>
-    その状態を、ひとりで抱え込まないでください。
-  </h1>
+    <h1>
+      「どう関わればいいのか分からない」<br>
+      その状態を、ひとりで抱え込まないでください。
+    </h1>
 
-  <p class="lead">
-    不登校は、子どもだけの問題ではありません。<br>
-    親・子ども・生活リズム・関わり方が重なり、状況が長引くことがあります。
-  </p>
+    <p class="lead">
+      不登校は、子どもだけの問題ではありません。<br>
+      親・子ども・生活リズム・関わり方が重なり、状況が長引くことがあります。
+    </p>
 
-  <p class="lead muted">
-    LUMIAでは、無理に学校へ戻すことを急がず、
-    まずは家庭の中のしんどさを整理することから始めます。
-  </p>
+    <p class="lead muted">
+      LUMIAでは、無理に学校へ戻すことを急がず、
+      まずは家庭の中のしんどさを整理することから始めます。
+    </p>
 
     <div class="hero-actions">
       <a class="btn btn-primary" href="#contact">まずは無料で相談する</a>
@@ -538,6 +568,7 @@
     </div>
   </section>
 
+  <!-- Warning box -->
   <section class="section">
     <div class="danger-box">
       <h2 style="margin-top:0;color:var(--danger)">こんな状態が続いていませんか？</h2>
@@ -553,12 +584,14 @@
     </div>
   </section>
 
+  <!-- Philosophy -->
   <section class="section panel">
     <h2 style="margin-top:0">LUMIAの考え方</h2>
     <p class="lead">「無理に学校に戻す」ことだけを目的にはしません。まずは<strong>生活・気持ち・関係性</strong>を整え、動ける土台をつくることを大切にします。</p>
     <p class="lead muted">小さな行動を積み重ねながら、自己肯定感と行動力を少しずつ回復していけるよう支援します。</p>
   </section>
 
+  <!-- Differences -->
   <section class="section" id="difference">
     <h2>LUMIAの違い</h2>
     <div class="grid-3">
@@ -580,6 +613,7 @@
     </div>
   </section>
 
+  <!-- Who it's for -->
   <section class="section">
     <h2>こんなご家庭に向いています</h2>
     <div class="grid-2">
@@ -590,6 +624,7 @@
     </div>
   </section>
 
+  <!-- Support contents -->
   <section class="section">
     <h2>サポート内容</h2>
     <div class="panel list">
@@ -603,15 +638,26 @@
     </div>
   </section>
 
+  <!-- Flow -->
   <section class="section">
     <h2>ご相談の流れ</h2>
     <div class="flow">
-      <div class="step"><div class="num">1</div><div><strong>LINEでご連絡</strong><p>今の状況を、短くでもそのまま送って大丈夫です。</p></div></div>
-      <div class="step"><div class="num">2</div><div><strong>状況を整理</strong><p>無理のない範囲で、何が起きているかを一緒に整理します。</p></div></div>
-      <div class="step"><div class="num">3</div><div><strong>必要な支援をご提案</strong><p>ご家庭に合う関わり方やサポート内容をご案内します。</p></div></div>
+      <div class="step">
+        <div class="num">1</div>
+        <div><strong>LINEでご連絡</strong><p>今の状況を、短くでもそのまま送って大丈夫です。</p></div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div><strong>状況を整理</strong><p>無理のない範囲で、何が起きているかを一緒に整理します。</p></div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div><strong>必要な支援をご提案</strong><p>ご家庭に合う関わり方やサポート内容をご案内します。</p></div>
+      </div>
     </div>
   </section>
 
+  <!-- Pricing -->
   <section class="section">
     <h2>料金について</h2>
     <div class="panel">
@@ -619,24 +665,22 @@
         無理にサービスをおすすめすることはありません。<br>
         まずは現在の状況を整理した上で、必要な場合のみご案内いたします。
       </p>
-
       <p>
         ・小学生：月額 6,000円〜<br>
         ・中学生：月額 7,800円〜<br>
         ・高校生：月額 8,500円〜
       </p>
-
       <p>
         ※初回は無料でご相談いただけます。<br>
         無理な勧誘は行いませんのでご安心ください。
       </p>
-
       <p>
         個別相談や追加サポートなど、必要に応じたオプションもご用意しています。
       </p>
     </div>
   </section>
 
+  <!-- Profile -->
   <section class="section panel">
     <div class="profile">
       <div class="avatar">🌱</div>
@@ -648,29 +692,50 @@
     </div>
   </section>
 
+  <!-- FAQ -->
   <section class="section">
     <h2>よくある不安</h2>
     <div class="faq">
-      <div class="faq-item"><h3>無理に勧誘されませんか？</h3><p>いいえ。まずは今の状況を整理するところから始めます。無理に申し込みを勧めることはありません。</p></div>
-      <div class="faq-item"><h3>何を相談していいか分かりません</h3><p>まとまっていなくても大丈夫です。話しながら整理できます。</p></div>
-      <div class="faq-item"><h3>まだ利用するか決めていません</h3><p>問題ありません。初回は「今どうなっているか」を整理するだけでも大丈夫です。</p></div>
+      <div class="faq-item">
+        <h3>無理に勧誘されませんか？</h3>
+        <p>いいえ。まずは今の状況を整理するところから始めます。無理に申し込みを勧めることはありません。</p>
+      </div>
+      <div class="faq-item">
+        <h3>何を相談していいか分かりません</h3>
+        <p>まとまっていなくても大丈夫です。話しながら整理できます。</p>
+      </div>
+      <div class="faq-item">
+        <h3>まだ利用するか決めていません</h3>
+        <p>問題ありません。初回は「今どうなっているか」を整理するだけでも大丈夫です。</p>
+      </div>
     </div>
   </section>
 
+  <!-- CTA Section — now has a LINE button inside it -->
   <section class="cta-section" id="contact">
     <h2>今の状態を、一緒に整理しませんか？</h2>
     <p class="lead">最初からうまく話せなくても大丈夫です。<br><strong>初回は「状況整理だけ」でも構いません。</strong></p>
+    <a class="cta-line-btn" href="https://lin.ee/sb6gOrZ" target="_blank" rel="noopener noreferrer">
+      LINEで無料相談してみる
+    </a>
     <div class="cta-sub">※通常24時間以内を目安にご返信いたします。状況整理だけでも大丈夫です。</div>
   </section>
 
+  <!-- Sticky CTA -->
   <div class="sticky-cta">
-    <a class="cta" href="https://lin.ee/sb6gOrZ" target="_blank">LINEで無料相談してみる</a>
+    <a href="https://lin.ee/sb6gOrZ" target="_blank" rel="noopener noreferrer">
+      LINEで無料相談してみる
+    </a>
   </div>
 
+  <!-- Footer -->
   <div class="footer-note">
-  LUMIA<br>
-  <span class="small">不登校・家庭支援 / 相談窓口</span><br>
+    LUMIA<br>
+    <span class="small">不登校・家庭支援 / 相談窓口</span><br>
+    <a href="terms.html">利用規約</a>　
+    <a href="privacy.html">プライバシーポリシー</a>
+  </div>
 
-  <a href="terms.html">利用規約</a>　
-  <a href="privacy.html">プライバシーポリシー</a>
 </div>
+</body>
+</html>
