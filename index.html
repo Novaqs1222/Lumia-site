@@ -482,10 +482,20 @@
   color:#2f67c8;
 }
 @media (max-width: 768px) {
+  .container {
+    padding: 0;   /* ←横の余白も消す */
+  }
+
+  .hero-banner {
+    margin: 0;
+    padding: 0;
+  }
+
   .hero-banner img {
     width: 100%;
-    max-height: 120px;   /* ←もっと小さく */
+    max-height: 110px;  /* ←ちょうどいいサイズ */
     object-fit: cover;
+    border-radius: 0;   /* ←角丸も消す */
   }
 }
   </style>
