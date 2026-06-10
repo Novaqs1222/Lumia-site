@@ -144,16 +144,13 @@ section{padding:88px 0;}
 .pbtn-sub:hover{background:var(--sky-pale);}
 .cf-section{background:linear-gradient(170deg,var(--sky-pale) 0%,white 40%,var(--sky-ghost) 100%);position:relative;overflow:hidden;}
 .cf-section::before{content:'';position:absolute;bottom:-150px;right:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(74,159,212,0.1) 0%,transparent 70%);}
-.cf-inner{display:grid;grid-template-columns:1fr 1fr;gap:68px;align-items:center;position:relative;z-index:1;}
+.cf-inner{max-width:680px;margin:0 auto;position:relative;z-index:1;}
 .cf-ways{display:flex;flex-direction:column;gap:11px;}
 .cf-way{background:white;border:1.5px solid rgba(74,159,212,0.15);border-radius:13px;padding:15px 18px;display:flex;align-items:center;gap:12px;transition:all .25s;cursor:pointer;box-shadow:0 2px 10px rgba(33,118,176,0.05);}
 .cf-way:hover{box-shadow:0 6px 20px rgba(33,118,176,0.12);transform:translateX(5px);border-color:var(--sky-mid);}
 .cf-way-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--sky-pale),rgba(74,159,212,0.15));display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
 .cf-way h4{font-size:13px;font-weight:700;color:var(--txt-dark);margin-bottom:2px;}
 .cf-way p{font-size:12px;color:var(--txt-mid);}
-.cf-right{display:flex;flex-direction:column;align-items:center;gap:22px;}
-.cf-flyer{width:100%;border-radius:18px;overflow:hidden;box-shadow:0 18px 50px rgba(33,118,176,0.14);border:1px solid rgba(74,159,212,0.1);}
-.cf-flyer img{width:100%;display:block;}
 .trust-section{background:white;text-align:center;}
 .trust-grid{display:flex;justify-content:center;gap:52px;margin-top:50px;flex-wrap:wrap;}
 .trust-item{max-width:148px;display:flex;flex-direction:column;align-items:center;gap:11px;}
@@ -517,21 +514,20 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
 
 <section class="cf-section" id="crowdfunding">
   <div class="container">
-    <div class="cf-inner">
-      <div class="reveal">
-        <p class="sec-label">Crowdfunding</p>
+    <div class="cf-inner reveal">
+      <div class="center" style="margin-bottom:32px;">
+        <p class="sec-label" style="justify-content:center">Crowdfunding</p>
         <h2 class="sec-title">クラウドファンディングに<br>挑戦中！</h2>
         <p class="sec-desc">みなさんの温かいご支援をお待ちしています。</p>
-        <div class="cf-ways" style="margin-top:24px;">
-          <div class="cf-way"><div class="cf-way-icon"></div><div><h4>ご支援（支援金）</h4><p>クラウドファンディングページからご支援いただけます</p></div></div>
-          <div class="cf-way"><div class="cf-way-icon"></div><div><h4>シェア・拡散</h4><p>SNSでのシェアも大きな力になります</p></div></div>
-          <div class="cf-way"><div class="cf-way-icon"></div><div><h4>応援メッセージ</h4><p>温かいメッセージもチームの励みになります</p></div></div>
-        </div>
       </div>
-      <div class="cf-right reveal">
-        <div class="cf-flyer"><img src="/mnt/user-data/uploads/7601828F-7719-40EE-9EE7-EC3397535D2B.png" alt="クラファンチラシ"></div>
-        <a href="https://for-good.net/project/1003634" target="_blank" rel="noopener" class="btn-sky" style="width:100%;justify-content:center;padding:18px 28px;font-size:15px;">🌟 FOR GOODでご支援する</a>
-        <p style="font-size:12px;color:var(--txt-light);text-align:center;">クラウドファンディングサイト「FOR GOOD」にて受付中</p>
+      <div class="cf-ways">
+        <div class="cf-way"><div class="cf-way-icon"></div><div><h4>ご支援（支援金）</h4><p>クラウドファンディングページからご支援いただけます</p></div></div>
+        <div class="cf-way"><div class="cf-way-icon"></div><div><h4>シェア・拡散</h4><p>SNSでのシェアも大きな力になります</p></div></div>
+        <div class="cf-way"><div class="cf-way-icon"></div><div><h4>応援メッセージ</h4><p>温かいメッセージもチームの励みになります</p></div></div>
+      </div>
+      <div style="text-align:center;margin-top:28px;">
+        <a href="https://for-good.net/project/1003634" target="_blank" rel="noopener" class="btn-sky" style="justify-content:center;padding:18px 36px;font-size:15px;">🌟 FOR GOODでご支援する</a>
+        <p style="font-size:12px;color:var(--txt-light);margin-top:10px;">クラウドファンディングサイト「FOR GOOD」にて受付中</p>
       </div>
     </div>
   </div>
