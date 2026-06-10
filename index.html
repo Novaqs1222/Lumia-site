@@ -145,10 +145,6 @@ section{padding:88px 0;}
 .cf-section{background:linear-gradient(170deg,var(--sky-pale) 0%,white 40%,var(--sky-ghost) 100%);position:relative;overflow:hidden;}
 .cf-section::before{content:'';position:absolute;bottom:-150px;right:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(74,159,212,0.1) 0%,transparent 70%);}
 .cf-inner{display:grid;grid-template-columns:1fr 1fr;gap:68px;align-items:center;position:relative;z-index:1;}
-.cf-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0;}
-.cf-stat{background:white;border:1.5px solid rgba(74,159,212,0.16);border-radius:14px;padding:18px;text-align:center;box-shadow:0 2px 14px rgba(33,118,176,0.06);}
-.cf-stat-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--sky-deep);line-height:1;margin-bottom:5px;}
-.cf-stat-label{font-size:11px;color:var(--txt-light);}
 .cf-ways{display:flex;flex-direction:column;gap:11px;}
 .cf-way{background:white;border:1.5px solid rgba(74,159,212,0.15);border-radius:13px;padding:15px 18px;display:flex;align-items:center;gap:12px;transition:all .25s;cursor:pointer;box-shadow:0 2px 10px rgba(33,118,176,0.05);}
 .cf-way:hover{box-shadow:0 6px 20px rgba(33,118,176,0.12);transform:translateX(5px);border-color:var(--sky-mid);}
@@ -158,7 +154,6 @@ section{padding:88px 0;}
 .cf-right{display:flex;flex-direction:column;align-items:center;gap:22px;}
 .cf-flyer{width:100%;border-radius:18px;overflow:hidden;box-shadow:0 18px 50px rgba(33,118,176,0.14);border:1px solid rgba(74,159,212,0.1);}
 .cf-flyer img{width:100%;display:block;}
-.cf-qr{width:150px;height:150px;background:var(--sky-ghost);border:2px dashed rgba(74,159,212,0.35);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--txt-light);font-size:12px;text-align:center;gap:6px;}
 .trust-section{background:white;text-align:center;}
 .trust-grid{display:flex;justify-content:center;gap:52px;margin-top:50px;flex-wrap:wrap;}
 .trust-item{max-width:148px;display:flex;flex-direction:column;align-items:center;gap:11px;}
@@ -526,12 +521,8 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
       <div class="reveal">
         <p class="sec-label">Crowdfunding</p>
         <h2 class="sec-title">クラウドファンディングに<br>挑戦中！</h2>
-        <p class="sec-desc">医療従事者として、もっと寄り添える支援がしたい。あなたのご支援が、子どもたちの希望につながります。</p>
-        <div class="cf-stats">
-          <div class="cf-stat"><div class="cf-stat-num">34.6万</div><div class="cf-stat-label">不登校児童数（過去最多）</div></div>
-          <div class="cf-stat"><div class="cf-stat-num">3軸</div><div class="cf-stat-label">子ども・親・環境を同時支援</div></div>
-        </div>
-        <div class="cf-ways">
+        <p class="sec-desc">みなさんの温かいご支援をお待ちしています。</p>
+        <div class="cf-ways" style="margin-top:24px;">
           <div class="cf-way"><div class="cf-way-icon"></div><div><h4>ご支援（支援金）</h4><p>クラウドファンディングページからご支援いただけます</p></div></div>
           <div class="cf-way"><div class="cf-way-icon"></div><div><h4>シェア・拡散</h4><p>SNSでのシェアも大きな力になります</p></div></div>
           <div class="cf-way"><div class="cf-way-icon"></div><div><h4>応援メッセージ</h4><p>温かいメッセージもチームの励みになります</p></div></div>
@@ -663,4 +654,4 @@ document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',(
   <svg class="line-float-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.02 2 11c0 3.53 2.06 6.62 5.14 8.41L6 22l3.09-1.61C10 20.77 11 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2zm1 13H8v-1.5h5V15zm2-3H8v-1.5h7V12zm0-3H8V7.5h7V9z"/></svg>
   まずはLINEで無料相談する
 </a>
-</body>
+</document-content>
