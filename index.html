@@ -15,6 +15,8 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'M PLUS Rounded 1c',sans-serif;background:var(--white);color:var(--txt-dark);overflow-x:hidden;}
+
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 48px;background:rgba(255,255,255,0.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(74,159,212,0.15);box-shadow:0 2px 20px rgba(33,118,176,0.08);height:68px;overflow:hidden;}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .nav-logo img{width:40px;height:40px;min-width:40px;border-radius:50%;object-fit:cover;object-position:50% 22%;transform:scale(1.35);box-shadow:0 2px 10px rgba(74,159,212,0.25);display:block;flex-shrink:0;}
@@ -24,8 +26,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links a{color:var(--txt-mid);text-decoration:none;font-size:13px;transition:color .2s;}
 .nav-links a:hover{color:var(--sky-deep);}
 .nav-cta{background:linear-gradient(135deg,var(--sky-deep),var(--sky-mid));color:white!important;padding:8px 20px;border-radius:22px;font-weight:700!important;box-shadow:0 4px 14px rgba(33,118,176,0.28);}
-.hero-banner{width:100%;display:block;margin-top:68px;}
-.hero-banner img{width:100%;display:block;max-height:340px;object-fit:cover;object-position:center top;}
+
+/* HERO BANNER */
+.hero-banner{
+  width:100%;
+  display:block;
+  margin-top:68px;
+}
+.hero-banner img{
+  width:100%;
+  display:block;
+  max-height:340px;
+  object-fit:cover;
+  object-position:center top;
+}
+
+/* HERO */
 .hero-wrap{background:linear-gradient(175deg,#ffffff 0%,#e2f4fd 35%,#c6eaf9 65%,#dff3ff 100%);position:relative;overflow:hidden;padding-top:68px;}
 .hero-wrap::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:900px;height:700px;background:radial-gradient(ellipse,rgba(255,220,80,0.25) 0%,rgba(255,255,255,0.55) 30%,transparent 70%);border-radius:50%;pointer-events:none;}
 .cloud{position:absolute;background:white;border-radius:100px;opacity:0.65;box-shadow:0 4px 20px rgba(255,255,255,0.8);}
@@ -39,6 +55,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-content{position:relative;z-index:2;padding:64px 80px 40px;max-width:660px;animation:fadeUp 1s ease both;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.06em;color:var(--sky-deep);font-weight:600;margin-bottom:20px;background:white;padding:6px 14px;border-radius:20px;box-shadow:0 3px 16px rgba(33,118,176,0.13);white-space:nowrap;}
+.hero-eyebrow::before{content:'';color:var(--gold);font-size:10px;}
 .hero-headline{font-family:'Noto Serif JP',serif;font-size:clamp(30px,5vw,54px);font-weight:700;color:var(--txt-dark);line-height:1.45;margin-bottom:20px;}
 .sky-text{background:linear-gradient(135deg,var(--sky-deep) 0%,var(--sky-mid) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .gold-text{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-lt) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
@@ -54,6 +71,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hsi-num{font-family:'Pacifico',cursive;font-size:30px;font-weight:400;color:var(--sky-deep);line-height:1;}
 .hsi-label{font-size:11px;color:var(--txt-light);margin-top:4px;}
 .hero-img-r{position:absolute;right:0;bottom:0;top:0;width:38%;object-fit:cover;object-position:top;opacity:0.38;mask-image:linear-gradient(to left,rgba(0,0,0,.5) 20%,transparent);-webkit-mask-image:linear-gradient(to left,rgba(0,0,0,.5) 20%,transparent);}
+
+/* COMMON */
 section{padding:88px 0;}
 .container{max-width:1120px;margin:0 auto;padding:0 40px;}
 .sec-label{font-size:11px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
@@ -61,6 +80,11 @@ section{padding:88px 0;}
 .sec-title{font-family:'Noto Serif JP',serif;font-size:clamp(22px,3.5vw,36px);font-weight:700;color:var(--txt-dark);line-height:1.5;margin-bottom:14px;}
 .sec-desc{font-size:15px;color:var(--txt-mid);line-height:2;max-width:580px;}
 .center{text-align:center;}.center .sec-label{justify-content:center;}.center .sec-label::before{display:none;}.center .sec-desc{margin:0 auto;}
+
+/* BANNER */
+.banner-wrap img{width:100%;display:block;}
+
+/* PROBLEM */
 .problem-section{background:var(--sky-ghost);}
 .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px;}
 .problem-card{background:white;border-radius:20px;padding:32px 24px;border-top:4px solid var(--sky);box-shadow:0 4px 22px rgba(33,118,176,0.07);transition:transform .3s,box-shadow .3s;}
@@ -72,6 +96,8 @@ section{padding:88px 0;}
 .plist{list-style:none;display:flex;flex-direction:column;gap:8px;}
 .plist li{font-size:13px;color:var(--txt-mid);line-height:1.7;padding-left:13px;position:relative;}
 .plist li::before{content:'·';position:absolute;left:0;color:var(--sky);font-size:18px;line-height:1.35;}
+
+/* PILLARS - light bg */
 .pillars-section{background:linear-gradient(170deg,var(--sky-ghost) 0%,white 50%,var(--sky-pale) 100%);position:relative;overflow:hidden;}
 .pillars-section::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(ellipse,rgba(74,159,212,0.1) 0%,transparent 70%);pointer-events:none;}
 .pillars-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:50px;}
@@ -84,14 +110,23 @@ section{padding:88px 0;}
 .pillar-card h3{font-family:'M PLUS Rounded 1c',sans-serif;font-size:18px;font-weight:700;color:var(--txt-dark);margin-bottom:2px;}
 .pillar-en{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--sky-deep);letter-spacing:.18em;display:block;margin-bottom:6px;}
 .pillar-card p{font-size:13px;color:var(--txt-mid);line-height:1.85;margin:0;}
+
+/* COMPARISON TABLE */
 .compare-section{background:var(--sky-ghost);}
 .compare-wrap{margin-top:50px;overflow-x:auto;-webkit-overflow-scrolling:touch;}
 .compare-table{width:100%;border-collapse:collapse;min-width:600px;font-size:13px;}
-.compare-table th{background:linear-gradient(135deg,var(--sky-deep),var(--sky-mid));color:white;padding:12px 14px;text-align:center;font-weight:700;font-family:'M PLUS Rounded 1c',sans-serif;white-space:nowrap;}
+.compare-table th{
+  background:linear-gradient(135deg,var(--sky-deep),var(--sky-mid));
+  color:white;padding:12px 14px;text-align:center;font-weight:700;
+  font-family:'M PLUS Rounded 1c',sans-serif;white-space:nowrap;
+}
 .compare-table th:first-child{text-align:left;border-radius:12px 0 0 0;}
 .compare-table th:last-child{border-radius:0 12px 0 0;}
 .compare-table th.lumia-col{background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:#3a2000;}
-.compare-table td{padding:11px 14px;border-bottom:1px solid rgba(74,159,212,0.1);color:var(--txt-mid);vertical-align:middle;line-height:1.6;}
+.compare-table td{
+  padding:11px 14px;border-bottom:1px solid rgba(74,159,212,0.1);
+  color:var(--txt-mid);vertical-align:middle;line-height:1.6;
+}
 .compare-table td:first-child{font-weight:700;color:var(--txt-dark);white-space:nowrap;background:rgba(74,159,212,0.04);}
 .compare-table td.lumia-col{background:rgba(212,150,10,0.06);font-weight:600;color:var(--txt-dark);}
 .compare-table tr:last-child td:first-child{border-radius:0 0 0 12px;}
@@ -102,6 +137,8 @@ section{padding:88px 0;}
 .mid{color:var(--gold);font-weight:700;font-size:15px;}
 .bad{color:#bbb;font-weight:700;font-size:15px;}
 .compare-note{font-size:12px;color:var(--txt-light);margin-top:12px;text-align:right;}
+
+/* MONITOR */
 .monitor-section{background:white;}
 .monitor-header{text-align:center;margin-bottom:50px;}
 .monitor-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;}
@@ -121,6 +158,8 @@ section{padding:88px 0;}
 .monitor-cta{display:flex;flex-direction:column;gap:8px;margin-top:6px;}
 .monitor-cta .btn-sky{text-align:center;justify-content:center;font-size:14px;}
 .monitor-cta p{font-size:12px;color:var(--txt-light);text-align:center;}
+
+/* PRICING */
 .pricing-section{background:var(--sky-ghost);}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px;}
 .price-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 4px 22px rgba(33,118,176,0.08);border:2px solid transparent;transition:all .3s;}
@@ -142,19 +181,34 @@ section{padding:88px 0;}
 .pbtn-main:hover{box-shadow:0 8px 22px rgba(33,118,176,0.42);transform:translateY(-2px);}
 .pbtn-sub{background:var(--sky-ghost);color:var(--sky-deep);border:1.5px solid rgba(74,159,212,0.35);}
 .pbtn-sub:hover{background:var(--sky-pale);}
+
+/* CF - light */
 .cf-section{background:linear-gradient(170deg,var(--sky-pale) 0%,white 40%,var(--sky-ghost) 100%);position:relative;overflow:hidden;}
 .cf-section::before{content:'';position:absolute;bottom:-150px;right:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(74,159,212,0.1) 0%,transparent 70%);}
-.cf-inner{max-width:680px;margin:0 auto;position:relative;z-index:1;}
+.cf-inner{display:grid;grid-template-columns:1fr 1fr;gap:68px;align-items:center;position:relative;z-index:1;}
+.cf-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0;}
+.cf-stat{background:white;border:1.5px solid rgba(74,159,212,0.16);border-radius:14px;padding:18px;text-align:center;box-shadow:0 2px 14px rgba(33,118,176,0.06);}
+.cf-stat-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--sky-deep);line-height:1;margin-bottom:5px;}
+.cf-stat-label{font-size:11px;color:var(--txt-light);}
 .cf-ways{display:flex;flex-direction:column;gap:11px;}
 .cf-way{background:white;border:1.5px solid rgba(74,159,212,0.15);border-radius:13px;padding:15px 18px;display:flex;align-items:center;gap:12px;transition:all .25s;cursor:pointer;box-shadow:0 2px 10px rgba(33,118,176,0.05);}
 .cf-way:hover{box-shadow:0 6px 20px rgba(33,118,176,0.12);transform:translateX(5px);border-color:var(--sky-mid);}
+.cf-way-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--sky-pale),rgba(74,159,212,0.15));display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
 .cf-way h4{font-size:13px;font-weight:700;color:var(--txt-dark);margin-bottom:2px;}
 .cf-way p{font-size:12px;color:var(--txt-mid);}
+.cf-right{display:flex;flex-direction:column;align-items:center;gap:22px;}
+.cf-flyer{width:100%;border-radius:18px;overflow:hidden;box-shadow:0 18px 50px rgba(33,118,176,0.14);border:1px solid rgba(74,159,212,0.1);}
+.cf-flyer img{width:100%;display:block;}
+.cf-qr{width:150px;height:150px;background:var(--sky-ghost);border:2px dashed rgba(74,159,212,0.35);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--txt-light);font-size:12px;text-align:center;gap:6px;}
+
+/* TRUST */
 .trust-section{background:white;text-align:center;}
 .trust-grid{display:flex;justify-content:center;gap:52px;margin-top:50px;flex-wrap:wrap;}
 .trust-item{max-width:148px;display:flex;flex-direction:column;align-items:center;gap:11px;}
 .trust-icon{width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-size:26px;}
 .trust-item p{font-size:13px;color:var(--txt-mid);line-height:1.7;text-align:center;}
+
+/* CTA */
 .cta-section{background:linear-gradient(135deg,var(--sky-deep) 0%,var(--sky-mid) 100%);padding:72px 0;text-align:center;position:relative;overflow:hidden;}
 .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,220,80,0.18) 0%,transparent 60%);}
 .cta-section h2{font-family:'Noto Serif JP',serif;font-size:clamp(20px,3.5vw,34px);color:white;font-weight:700;margin-bottom:12px;position:relative;}
@@ -162,6 +216,8 @@ section{padding:88px 0;}
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;}
 .btn-white{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--sky-deep);padding:14px 30px;border-radius:50px;text-decoration:none;font-weight:700;font-size:14px;box-shadow:0 6px 18px rgba(0,0,0,0.12);transition:all .25s;}
 .btn-white:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,0.18);}
+
+/* FOOTER */
 footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(--sky-mid);}
 .footer-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:44px;margin-bottom:36px;}
 .fbrand-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
@@ -174,21 +230,39 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
 .footer-col ul a{font-size:13px;color:rgba(255,255,255,.52);text-decoration:none;transition:color .25s;}
 .footer-col ul a:hover{color:var(--sky-mid);}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;text-align:center;font-size:12px;color:rgba(255,255,255,.28);}
+
+/* REVEAL */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
+
+/* SERVICE */
 .service-section{background:white;}
 .svc-tabs{display:flex;gap:12px;margin:40px 0 32px;justify-content:center;}
-.svc-tab{padding:12px 32px;border-radius:50px;border:2px solid rgba(74,159,212,0.3);background:white;color:var(--txt-mid);font-family:'M PLUS Rounded 1c',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .25s;}
-.svc-tab.active{background:linear-gradient(135deg,var(--sky-deep),var(--sky-mid));color:white;border-color:transparent;box-shadow:0 6px 20px rgba(33,118,176,0.3);}
+.svc-tab{
+  padding:12px 32px;border-radius:50px;border:2px solid rgba(74,159,212,0.3);
+  background:white;color:var(--txt-mid);font-family:'M PLUS Rounded 1c',sans-serif;
+  font-size:14px;font-weight:700;cursor:pointer;transition:all .25s;
+}
+.svc-tab.active{
+  background:linear-gradient(135deg,var(--sky-deep),var(--sky-mid));
+  color:white;border-color:transparent;
+  box-shadow:0 6px 20px rgba(33,118,176,0.3);
+}
 .svc-tab:hover:not(.active){background:var(--sky-ghost);border-color:var(--sky-mid);}
 .svc-panel{transition:opacity .3s;}
 .svc-panel.hidden{display:none;}
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;}
-.svc-card{background:var(--sky-ghost);border-radius:18px;padding:24px 20px;border:1.5px solid rgba(74,159,212,0.12);transition:transform .25s,box-shadow .25s;}
+.svc-card{
+  background:var(--sky-ghost);border-radius:18px;padding:24px 20px;
+  border:1.5px solid rgba(74,159,212,0.12);
+  transition:transform .25s,box-shadow .25s;
+}
 .svc-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(33,118,176,0.1);}
 .svc-icon{font-size:28px;margin-bottom:12px;}
 .svc-card h4{font-size:14px;font-weight:700;color:var(--txt-dark);margin-bottom:8px;}
 .svc-card p{font-size:13px;color:var(--txt-mid);line-height:1.85;}
+
+/* FAQ */
 .faq-section{background:var(--sky-ghost);}
 .faq-categories{display:flex;flex-direction:column;gap:32px;margin-top:50px;}
 .faq-cat-title{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;color:var(--sky-deep);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
@@ -203,6 +277,8 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 20px;}
 .faq-item.open .faq-a{max-height:400px;padding:0 20px 16px;}
 .faq-a p{font-size:13px;color:var(--txt-mid);line-height:1.9;padding-left:32px;border-left:3px solid var(--sky-pale);}
+
+/* RESPONSIVE */
 @media(max-width:860px){
   nav{padding:11px 18px;}.nav-links{display:none;}
   .hero{min-height:auto;}.hero-content{padding:40px 20px 36px;max-width:100%;}
@@ -242,12 +318,17 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
 </div>
 
 <div class="hero-wrap" style="padding-top:0">
-  <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+  <div class="cloud c1"></div>
+  <div class="cloud c2"></div>
+  <div class="cloud c3"></div>
   <div id="sparkles"></div>
   <div class="hero">
     <div class="hero-content">
       <div class="hero-eyebrow">不登校の子どもたちとそのご家族に、未来への光を。</div>
-      <h1 class="hero-headline"><span class="sky-text">その子らしさから、</span><br>未来は<span class="gold-text">はじまる。</span></h1>
+      <h1 class="hero-headline">
+        <span class="sky-text">その子らしさから、</span><br>
+        未来は<span class="gold-text">はじまる。</span>
+      </h1>
       <p class="hero-sub">不登校のお子さまとご家庭を支える新しいオンライン型成長支援サービス「Lumia（ルミア）」。子ども・親・環境を同時に整え、一人ひとりに寄り添いながら共に歩みます。</p>
       <div class="hero-btns">
         <a href="#monitor" class="btn-gold"> モニター募集中</a>
@@ -263,6 +344,8 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
   </div>
 </div>
 
+
+
 <section class="problem-section" id="about">
   <div class="container">
     <div class="reveal">
@@ -271,9 +354,27 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
       <p class="sec-desc">子ども・親・環境がそれぞれに課題を抱え、相互に影響しながら悪循環を生んでいます。</p>
     </div>
     <div class="problem-grid">
-      <div class="problem-card reveal"><div class="pi"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="14" r="8" stroke="#4a9fd4" stroke-width="2"/><path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#4a9fd4" stroke-width="2" stroke-linecap="round"/></svg></div><h3>子どもの課題</h3><ul class="plist"><li>生活リズムの崩壊・昼夜逆転</li><li>自己肯定感の低下</li><li>「やっても無駄」という無力感</li><li>社会との接点が薄れていく</li></ul></div>
-      <div class="problem-card reveal"><div class="pi"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="14" cy="14" r="6" stroke="#d4960a" stroke-width="2"/><circle cx="28" cy="14" r="6" stroke="#d4960a" stroke-width="2"/><path d="M4 36c0-5.523 4.477-10 10-10m12 0c5.523 0 10 4.477 10 10" stroke="#d4960a" stroke-width="2" stroke-linecap="round"/></svg></div><h3>親御さんの課題</h3><ul class="plist"><li>どう関わればいいか分からない</li><li>周囲に相談できず孤独</li><li>不安とストレスで精神的に限界</li><li>支える側が支援を必要とする状態に</li></ul></div>
-      <div class="problem-card reveal"><div class="pi"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 34V18L20 6l14 12v16" stroke="#6ab8e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="15" y="24" width="10" height="10" rx="1" stroke="#6ab8e0" stroke-width="2"/></svg></div><h3>環境の課題</h3><ul class="plist"><li>家に安心できる逃げ場がない</li><li>「行く・行かない」の二択のみ</li><li>支援が分断されて届かない</li><li>自分に合ったサービスが見つからない</li></ul></div>
+      <div class="problem-card reveal">
+        <div class="pi">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="14" r="8" stroke="#4a9fd4" stroke-width="2"/><path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#4a9fd4" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>子どもの課題</h3>
+        <ul class="plist"><li>生活リズムの崩壊・昼夜逆転</li><li>自己肯定感の低下</li><li>「やっても無駄」という無力感</li><li>社会との接点が薄れていく</li></ul>
+      </div>
+      <div class="problem-card reveal">
+        <div class="pi">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="14" cy="14" r="6" stroke="#d4960a" stroke-width="2"/><circle cx="28" cy="14" r="6" stroke="#d4960a" stroke-width="2"/><path d="M4 36c0-5.523 4.477-10 10-10m12 0c5.523 0 10 4.477 10 10" stroke="#d4960a" stroke-width="2" stroke-linecap="round"/><path d="M20 26c2.5 0 4.5.8 6 2" stroke="#d4960a" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>親御さんの課題</h3>
+        <ul class="plist"><li>どう関わればいいか分からない</li><li>周囲に相談できず孤独</li><li>不安とストレスで精神的に限界</li><li>支える側が支援を必要とする状態に</li></ul>
+      </div>
+      <div class="problem-card reveal">
+        <div class="pi">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 34V18L20 6l14 12v16" stroke="#6ab8e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="15" y="24" width="10" height="10" rx="1" stroke="#6ab8e0" stroke-width="2"/></svg>
+        </div>
+        <h3>環境の課題</h3>
+        <ul class="plist"><li>家に安心できる逃げ場がない</li><li>「行く・行かない」の二択のみ</li><li>支援が分断されて届かない</li><li>自分に合ったサービスが見つからない</li></ul>
+      </div>
     </div>
   </div>
 </section>
@@ -287,7 +388,7 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
     </div>
     <div class="pillars-grid">
       <div class="pillar-card reveal"><div class="pillar-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L4 10v15h7v-7h6v7h7V10L14 3z" stroke="#4a9fd4" stroke-width="1.8" stroke-linejoin="round"/></svg></div><div class="pillar-text"><h3>生活</h3><span class="pillar-en">Life</span><p>睡眠・食事・日中の過ごし方を見直し、安心できる日常を取り戻します</p></div></div>
-      <div class="pillar-card reveal"><div class="pillar-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="#d4960a" stroke-width="1.8"/><path d="M8 24c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="#d4960a" stroke-width="1.8" stroke-linecap="round"/></svg></div><div class="pillar-text"><h3>行動</h3><span class="pillar-en">Action</span><p>小さな行動を積み重ね、成功体験と自己肯定感を少しずつ育てます</p></div></div>
+      <div class="pillar-card reveal"><div class="pillar-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="#d4960a" stroke-width="1.8"/><path d="M8 24c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="#d4960a" stroke-width="1.8" stroke-linecap="round"/><path d="M19 6l4-3M9 6L5 3" stroke="#d4960a" stroke-width="1.8" stroke-linecap="round"/></svg></div><div class="pillar-text"><h3>行動</h3><span class="pillar-en">Action</span><p>小さな行動を積み重ね、成功体験と自己肯定感を少しずつ育てます</p></div></div>
       <div class="pillar-card reveal"><div class="pillar-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4l2.5 7h7l-5.5 4 2 7L14 18l-6 4 2-7L4 11h7z" stroke="#6ab8e0" stroke-width="1.8" stroke-linejoin="round"/></svg></div><div class="pillar-text"><h3>興味</h3><span class="pillar-en">Interest</span><p>好き・得意を見つけ、やりたいという気持ちを引き出す支援をします</p></div></div>
       <div class="pillar-card reveal"><div class="pillar-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3v22M6 8l8-5 8 5M6 20l8 5 8-5" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="pillar-text"><h3>将来</h3><span class="pillar-en">Future</span><p>進学・働き方・生き方など、一人ひとりに合った未来を一緒に考えます</p></div></div>
     </div>
@@ -301,29 +402,89 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
       <h2 class="sec-title">具体的なサービス内容</h2>
       <p class="sec-desc">お子さまと保護者の方、それぞれに寄り添ったサポートを提供します。</p>
     </div>
+
+    <!-- TAB -->
     <div class="svc-tabs reveal">
-      <button class="svc-tab active" data-tab="child"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:inline;vertical-align:middle;margin-right:6px"><circle cx="8" cy="5" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 15c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>お子さま向け</button>
-      <button class="svc-tab" data-tab="parent"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:inline;vertical-align:middle;margin-right:6px"><circle cx="6" cy="5" r="2.5" stroke="currentColor" stroke-width="1.5"/><circle cx="11" cy="5" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M1 15c0-2.761 2.239-5 5-5m5 0c2.761 0 5 2.239 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>保護者向け</button>
+      <button class="svc-tab active" data-tab="child">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:inline;vertical-align:middle;margin-right:6px"><circle cx="8" cy="5" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 15c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>お子さま向け</button>
+      <button class="svc-tab" data-tab="parent">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:inline;vertical-align:middle;margin-right:6px"><circle cx="6" cy="5" r="2.5" stroke="currentColor" stroke-width="1.5"/><circle cx="11" cy="5" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M1 15c0-2.761 2.239-5 5-5m5 0c2.761 0 5 2.239 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>保護者向け</button>
     </div>
+
+    <!-- CHILD TAB -->
     <div class="svc-panel" id="tab-child">
       <div class="svc-grid">
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="5" y="3" width="18" height="22" rx="2" stroke="#4a9fd4" stroke-width="1.8"/><path d="M9 9h10M9 14h10M9 19h6" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div><h4>初期アセスメント</h4><p>支援開始時に生活リズム・メンタル・学習状況を丁寧に把握。回復初期／安定期／行動拡張期に分類し、無理のない支援レベルを設定します。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#4a9fd4" stroke-width="1.8"/><path d="M9 14l4 4 6-7" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4>1日1アクション設計</h4><p>「起床時間を30分以内に整える」「5分だけ外に出る」など小さな行動を毎日設計。「できた」を積み重ねて自己肯定感を回復します。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="2" stroke="#4a9fd4" stroke-width="1.8"/><path d="M9 25h10M14 22v3" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div><h4>オンライン居場所</h4><p>24時間アクセス可能なオンライン空間。発言しなくても参加OK・匿名OK。「何もしなくていていい場所」で社会との接点をつなぎます。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 4h18v20H5z" stroke="#4a9fd4" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 10h10M9 14h10M9 18h6" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div><h4>学習計画サポート</h4><p>短い動画教材・学習ドリルなど心理的ハードルを下げた設計。小学・中学生は出席認定サポート、高校生は高卒認定試験の学習計画もサポート。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="12" cy="12" r="7" stroke="#4a9fd4" stroke-width="1.8"/><path d="M17.5 17.5L24 24" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div><h4>興味・探究支援</h4><p>興味診断・適正診断でお子さまの「好き」を発見。イラスト・動画制作など体験提案を通じて「やらされる」から「やりたい」への転換を図ります。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.477 4 4 8.477 4 14c0 2.5.9 4.8 2.4 6.6L5 24l3.8-1.3C10.4 23.5 12.1 24 14 24c5.523 0 10-4.477 10-10S19.523 4 14 4z" stroke="#4a9fd4" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 13h8M10 17h5" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div><h4>AIメンタルケア</h4><p>専用タブレットにAI心理カウンセラーを搭載し24時間相談可能。人に言いにくいことも話せる安心設計。定期的にスタッフとの関わりも設けます。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8 3h12l4 4v18H4V3h4z" stroke="#4a9fd4" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h10M9 16h7M16 3v4h4" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div><h4>記録・自己理解</h4><p>専用ノートで「今日できたこと」「気持ちの変化」「小さな目標」を記録。自分の変化に気づける力を育てます。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="8" width="20" height="16" rx="2" stroke="#4a9fd4" stroke-width="1.8"/><path d="M9 8V5M19 8V5M4 14h20" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div><h4>オフライン体験イベント</h4><p>ものづくり・自然体験・研修など定期的なリアルイベントを実施。「楽しかった」をベースに社会参加のハードルを下げます。</p></div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="5" y="3" width="18" height="22" rx="2" stroke="#4a9fd4" stroke-width="1.8"/><path d="M9 9h10M9 14h10M9 19h6" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h4>初期アセスメント</h4>
+          <p>支援開始時に生活リズム・メンタル・学習状況を丁寧に把握。回復初期／安定期／行動拡張期に分類し、無理のない支援レベルを設定します。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#4a9fd4" stroke-width="1.8"/><path d="M9 14l4 4 6-7" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h4>1日1アクション設計</h4>
+          <p>「起床時間を30分以内に整える」「5分だけ外に出る」など小さな行動を毎日設計。「できた」を積み重ねて自己肯定感を回復します。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="2" stroke="#4a9fd4" stroke-width="1.8"/><path d="M9 25h10M14 22v3" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h4>オンライン居場所</h4>
+          <p>24時間アクセス可能なオンライン空間。発言しなくても参加OK・匿名OK。「何もしなくていていい場所」で社会との接点をつなぎます。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 4h18v20H5z" stroke="#4a9fd4" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 10h10M9 14h10M9 18h6" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h4>学習計画サポート</h4>
+          <p>短い動画教材・学習ドリルなど心理的ハードルを下げた設計。小学・中学生は出席認定サポート、高校生は高卒認定試験の学習計画もサポート。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="12" cy="12" r="7" stroke="#4a9fd4" stroke-width="1.8"/><path d="M17.5 17.5L24 24" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h4>興味・探究支援</h4>
+          <p>興味診断・適正診断でお子さまの「好き」を発見。イラスト・動画制作など体験提案を通じて「やらされる」から「やりたい」への転換を図ります。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.477 4 4 8.477 4 14c0 2.5.9 4.8 2.4 6.6L5 24l3.8-1.3C10.4 23.5 12.1 24 14 24c5.523 0 10-4.477 10-10S19.523 4 14 4z" stroke="#4a9fd4" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 13h8M10 17h5" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h4>AIメンタルケア</h4>
+          <p>専用タブレットにAI心理カウンセラーを搭載し24時間相談可能。人に言いにくいことも話せる安心設計。定期的にスタッフとの関わりも設けます。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8 3h12l4 4v18H4V3h4z" stroke="#4a9fd4" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h10M9 16h7M16 3v4h4" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h4>記録・自己理解</h4>
+          <p>専用ノートで「今日できたこと」「気持ちの変化」「小さな目標」を記録。自分の変化に気づける力を育てます。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="8" width="20" height="16" rx="2" stroke="#4a9fd4" stroke-width="1.8"/><path d="M9 8V5M19 8V5M4 14h20" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h4>オフライン体験イベント</h4>
+          <p>ものづくり・自然体験・研修など定期的なリアルイベントを実施。「楽しかった」をベースに社会参加のハードルを下げます。</p>
+        </div>
       </div>
     </div>
+
+    <!-- PARENT TAB -->
     <div class="svc-panel hidden" id="tab-parent">
       <div class="svc-grid">
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.477 4 4 8.477 4 14c0 2.5.9 4.8 2.4 6.6L5 24l3.8-1.3C10.4 23.5 12.1 24 14 24c5.523 0 10-4.477 10-10S19.523 4 14 4z" stroke="#d4960a" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 13h8M10 17h5" stroke="#d4960a" stroke-width="1.8" stroke-linecap="round"/></svg></div><h4>24時間AIチャット相談</h4><p>日々の不安・子どもへのイライラ・誰にも言えない本音を吐き出せる場所。否定されない安心設計で、家庭内で感情をぶつける前に外で整理できます。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 4h4l2 5-2.5 1.5a14 14 0 006 6L17 14l5 2v4c0 1.1-.9 2-2 2C10 22 6 12 6 6V4z" stroke="#d4960a" stroke-width="1.8" stroke-linejoin="round"/></svg></div><h4>対人面談・メール・電話</h4><p>AIチャットに加え、スタッフによる個別対応も実施。「どう接すればいいか」を一緒に考え、具体的な声かけ例やNG行動も整理します。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="10" cy="10" r="5" stroke="#d4960a" stroke-width="1.8"/><circle cx="20" cy="10" r="5" stroke="#d4960a" stroke-width="1.8"/><path d="M4 24c0-3 2.7-5.5 6-5.5m10 0c3.3 0 6 2.5 6 5.5" stroke="#d4960a" stroke-width="1.8" stroke-linecap="round"/></svg></div><h4>個別面談＋教育コンテンツ</h4><p>月1〜2回のオンライン個別面談。スキマ時間で学べる教育コンテンツ（不登校の背景・回復プロセス・関わり方の具体例）も提供します。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="22" height="22" rx="2" stroke="#d4960a" stroke-width="1.8"/><path d="M8 18l4-5 4 3 4-6" stroke="#d4960a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4>子どもの見える化レポート</h4><p>週1回、お子さまの行動・メンタルの変化・小さな成功体験をレポートで共有。日常では見えにくい「小さな成長」を可視化して過度な心配を軽減します。</p></div>
-        <div class="svc-card reveal"><div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="8" cy="10" r="4" stroke="#d4960a" stroke-width="1.8"/><circle cx="20" cy="10" r="4" stroke="#d4960a" stroke-width="1.8"/><circle cx="14" cy="18" r="4" stroke="#d4960a" stroke-width="1.8"/></svg></div><h4>保護者コミュニティ</h4><p>同じ立場の保護者同士がつながれる場。匿名参加OK・閲覧のみでも参加可能。「自分だけじゃない」という安心感と孤立感の軽減につながります。</p></div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.477 4 4 8.477 4 14c0 2.5.9 4.8 2.4 6.6L5 24l3.8-1.3C10.4 23.5 12.1 24 14 24c5.523 0 10-4.477 10-10S19.523 4 14 4z" stroke="#d4960a" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 13h8M10 17h5" stroke="#d4960a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h4>24時間AIチャット相談</h4>
+          <p>日々の不安・子どもへのイライラ・誰にも言えない本音を吐き出せる場所。否定されない安心設計で、家庭内で感情をぶつける前に外で整理できます。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 4h4l2 5-2.5 1.5a14 14 0 006 6L17 14l5 2v4c0 1.1-.9 2-2 2C10 22 6 12 6 6V4z" stroke="#d4960a" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <h4>対人面談・メール・電話</h4>
+          <p>AIチャットに加え、スタッフによる個別対応も実施。「どう接すればいいか」を一緒に考え、具体的な声かけ例やNG行動も整理します。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="10" cy="10" r="5" stroke="#d4960a" stroke-width="1.8"/><circle cx="20" cy="10" r="5" stroke="#d4960a" stroke-width="1.8"/><path d="M4 24c0-3 2.7-5.5 6-5.5m10 0c3.3 0 6 2.5 6 5.5" stroke="#d4960a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h4>個別面談＋教育コンテンツ</h4>
+          <p>月1〜2回のオンライン個別面談。スキマ時間で学べる教育コンテンツ（不登校の背景・回復プロセス・関わり方の具体例）も提供します。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="22" height="22" rx="2" stroke="#d4960a" stroke-width="1.8"/><path d="M8 18l4-5 4 3 4-6" stroke="#d4960a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h4>子どもの見える化レポート</h4>
+          <p>週1回、お子さまの行動・メンタルの変化・小さな成功体験をレポートで共有。日常では見えにくい「小さな成長」を可視化して過度な心配を軽減します。</p>
+        </div>
+        <div class="svc-card reveal">
+          <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="8" cy="10" r="4" stroke="#d4960a" stroke-width="1.8"/><circle cx="20" cy="10" r="4" stroke="#d4960a" stroke-width="1.8"/><circle cx="14" cy="18" r="4" stroke="#d4960a" stroke-width="1.8"/><path d="M11.5 14.5l-2 2M16.5 14.5l2 2" stroke="#d4960a" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h4>保護者コミュニティ</h4>
+          <p>同じ立場の保護者同士がつながれる場。匿名参加OK・閲覧のみでも参加可能。「自分だけじゃない」という安心感と孤立感の軽減につながります。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -342,45 +503,31 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
           <tr>
             <th>項目</th>
             <th class="lumia-col"> LUMIA</th>
-            <th>民間オンライン支援（相場）</th>
+            <th>S社</th>
             <th>フリースクール</th>
             <th>一般塾</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>料金（月額目安）</td>
-            <td class="lumia-col">8,600〜13,600円（税込）</td>
-            <td>5〜15万円程度</td>
-            <td>3〜7万円程度</td>
-            <td>3〜7万円程度</td>
+            <td>料金（目安）</td>
+            <td class="lumia-col">8,600〜13,600円/月（税込）</td>
+            <td>総額35〜55万円程度</td>
+            <td>月額3〜7万円程度</td>
+            <td>年間40〜90万円程度</td>
           </tr>
           <tr>
-            <td>不登校専門サポート</td>
+            <td>初期費用</td>
+            <td class="lumia-col">入会金 5,000円</td>
+            <td>あり</td>
+            <td>あり（入会金など）</td>
+            <td>あり（入塾金など）</td>
+          </tr>
+          <tr>
+            <td>不登校支援を主目的</td>
             <td class="lumia-col"><span class="good">○</span></td>
             <td><span class="good">○</span></td>
             <td><span class="good">○</span></td>
-            <td><span class="bad">×</span></td>
-          </tr>
-          <tr>
-            <td>自宅完結（通所不要）</td>
-            <td class="lumia-col"><span class="good">○</span></td>
-            <td><span class="good">○</span></td>
-            <td><span class="bad">×</span></td>
-            <td><span class="bad">×</span></td>
-          </tr>
-          <tr>
-            <td>生活面の支援</td>
-            <td class="lumia-col"><span class="good">○</span>（支援の中心）</td>
-            <td><span class="mid">△</span>（サービス差あり）</td>
-            <td><span class="mid">△</span>（施設差あり）</td>
-            <td><span class="bad">×</span></td>
-          </tr>
-          <tr>
-            <td>保護者へのサポート</td>
-            <td class="lumia-col"><span class="good">○</span></td>
-            <td><span class="mid">△</span>（サービス差あり）</td>
-            <td><span class="mid">△</span>（施設差あり）</td>
             <td><span class="bad">×</span></td>
           </tr>
           <tr>
@@ -389,6 +536,48 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
             <td><span class="good">○</span></td>
             <td><span class="mid">△</span>（施設差あり）</td>
             <td><span class="good">○</span></td>
+          </tr>
+          <tr>
+            <td>生活面の支援</td>
+            <td class="lumia-col"><span class="good">○</span>（支援の中心）</td>
+            <td><span class="good">○</span></td>
+            <td><span class="mid">△</span>（施設差あり）</td>
+            <td><span class="bad">×</span></td>
+          </tr>
+          <tr>
+            <td>自宅でサービスが完結</td>
+            <td class="lumia-col"><span class="good">○</span>（オンライン対応）</td>
+            <td><span class="good">○</span></td>
+            <td><span class="mid">△</span></td>
+            <td><span class="mid">○/△</span></td>
+          </tr>
+          <tr>
+            <td>通所が必要</td>
+            <td class="lumia-col"><span class="good">不要</span></td>
+            <td><span class="good">不要</span></td>
+            <td><span class="bad">必要</span></td>
+            <td><span class="bad">必要</span></td>
+          </tr>
+          <tr>
+            <td>保護者への支援</td>
+            <td class="lumia-col"><span class="good">○</span>（関わり方のサポート）</td>
+            <td><span class="good">○</span>（保護者主体で進める）</td>
+            <td><span class="mid">△</span>（施設差あり）</td>
+            <td><span class="bad">×</span></td>
+          </tr>
+          <tr>
+            <td>継続的なフォロー</td>
+            <td class="lumia-col"><span class="good">○</span>（日常ベース・開発中）</td>
+            <td><span class="good">○</span>（期間内集中サポート）</td>
+            <td><span class="mid">△</span></td>
+            <td><span class="bad">×</span></td>
+          </tr>
+          <tr>
+            <td>ICT・AIの活用</td>
+            <td class="lumia-col"><span class="good">○</span>（AIチャット・可視化）</td>
+            <td><span class="mid">△</span></td>
+            <td><span class="mid">△</span></td>
+            <td><span class="mid">△</span></td>
           </tr>
           <tr>
             <td>他者との交流機会</td>
@@ -400,20 +589,41 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
           <tr>
             <td>社会復帰支援</td>
             <td class="lumia-col"><span class="good">○</span>（多様な進路を検討）</td>
-            <td><span class="good">○</span></td>
+            <td><span class="good">○</span>（学校復帰に特化）</td>
             <td><span class="good">○</span></td>
             <td><span class="bad">×</span></td>
           </tr>
           <tr>
+            <td>費用の柔軟性</td>
+            <td class="lumia-col"><span class="mid">△</span>（オプション追加可）</td>
+            <td><span class="mid">△</span>（一括料金）</td>
+            <td><span class="mid">△</span></td>
+            <td><span class="good">○</span></td>
+          </tr>
+          <tr>
+            <td>専門職関与（心理・医療）</td>
+            <td class="lumia-col"><span class="mid">△</span>（現時点では未対応）</td>
+            <td><span class="good">○</span>（専門家チームが対応）</td>
+            <td><span class="mid">△</span></td>
+            <td><span class="bad">×</span></td>
+          </tr>
+          <tr>
+            <td>情報源</td>
+            <td class="lumia-col">企画資料</td>
+            <td>公式サイト</td>
+            <td>文科省・各施設HP</td>
+            <td>文科省・教育系データ</td>
+          </tr>
+          <tr>
             <td>向いているケース</td>
             <td class="lumia-col">何から始めるか<br>分からない家庭</td>
-            <td>短期間での<br>学校復帰重視</td>
-            <td>居場所が必要な子</td>
+            <td>短期間で<br>学校復帰を目指したい</td>
+            <td>居場所が必要</td>
             <td>学力を上げたい</td>
           </tr>
         </tbody>
       </table>
-      <p class="compare-note">※ LUMIAの内容は開発中で変更可能性あり。民間サービス・各施設の情報は公開情報をもとに作成した参考相場です。サービス・施設ごとに差があります。</p>
+      <p class="compare-note">※ LUMIAの内容は開発中で変更可能性あり。S社・各施設の情報は公式サイト・文科省資料をもとに作成。施設ごとに差があります。</p>
     </div>
   </div>
 </section>
@@ -471,20 +681,23 @@ footer{background:var(--txt-dark);padding:52px 0 26px;border-top:3px solid var(-
 
 <section class="cf-section" id="crowdfunding">
   <div class="container">
-    <div class="cf-inner reveal">
-      <div class="center" style="margin-bottom:32px;">
-        <p class="sec-label" style="justify-content:center">Crowdfunding</p>
+    <div class="cf-inner">
+      <div class="reveal">
+        <p class="sec-label">Crowdfunding</p>
         <h2 class="sec-title">クラウドファンディングに<br>挑戦中！</h2>
-        <p class="sec-desc">みなさんの温かいご支援をお待ちしています。</p>
+        <p class="sec-desc">医療従事者として、もっと寄り添える支援がしたい。あなたのご支援が、子どもたちの希望につながります。</p>
+        <div class="cf-stats">
+          <div class="cf-stat"><div class="cf-stat-num">34.6万</div><div class="cf-stat-label">不登校児童数（過去最多）</div></div>
+          <div class="cf-stat"><div class="cf-stat-num">3軸</div><div class="cf-stat-label">子ども・親・環境を同時支援</div></div>
+        </div>
+        <div class="cf-ways">
+          <a href="https://for-good.net/project/1003634" target="_blank" rel="noopener" class="cf-way"><div class="cf-way-icon"></div><div><h4>ご支援（支援金）</h4><p>クラウドファンディングページからご支援いただけます</p></div></div>
+          <a href="https://for-good.net/project/1003634" target="_blank" rel="noopener" class="cf-way"><div class="cf-way-icon"></div><div><h4>シェア・拡散</h4><p>SNSでのシェアも大きな力になります</p></div></div>
+          <a href="https://for-good.net/project/1003634" target="_blank" rel="noopener" class="cf-way"><div class="cf-way-icon"></div><div><h4>応援メッセージ</h4><p>温かいメッセージもチームの励みになります</p></div></div>
+        </div>
       </div>
-      <div class="cf-ways">
-        <div class="cf-way"><div><h4>ご支援（支援金）</h4><p>クラウドファンディングページからご支援いただけます</p></div></div>
-        <div class="cf-way"><div><h4>シェア・拡散</h4><p>SNSでのシェアも大きな力になります</p></div></div>
-        <div class="cf-way"><div><h4>応援メッセージ</h4><p>温かいメッセージもチームの励みになります</p></div></div>
-      </div>
-      <div style="text-align:center;margin-top:28px;">
-        <a href="https://for-good.net/project/1003634" target="_blank" rel="noopener" class="btn-sky" style="justify-content:center;padding:18px 36px;font-size:15px;">🌟 FOR GOODでご支援する</a>
-        <p style="font-size:12px;color:var(--txt-light);margin-top:10px;">クラウドファンディングサイト「FOR GOOD」にて受付中</p>
+      <div class="cf-right reveal">
+        <a href="https://for-good.net/project/1003634" target="_blank" rel="noopener" class="btn-sky">クラファンページを見る ✦</a>
       </div>
     </div>
   </div>
@@ -595,16 +808,35 @@ const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIn
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 document.querySelectorAll('.svc-tab').forEach(tab=>{tab.addEventListener('click',()=>{document.querySelectorAll('.svc-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.svc-panel').forEach(p=>p.classList.add('hidden'));tab.classList.add('active');document.getElementById('tab-'+tab.dataset.tab).classList.remove('hidden');});});
 document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');});});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+<!-- LINE Floating Button -->
 <style>
-.line-float{position:fixed;bottom:24px;right:20px;z-index:999;display:flex;align-items:center;gap:10px;background:#06C755;color:white;padding:13px 20px;border-radius:50px;text-decoration:none;font-family:'M PLUS Rounded 1c',sans-serif;font-size:14px;font-weight:700;box-shadow:0 6px 24px rgba(6,199,85,0.45);transition:transform .25s,box-shadow .25s;animation:floatIn .6s ease both;}
+.line-float{
+  position:fixed;bottom:24px;right:20px;z-index:999;
+  display:flex;align-items:center;gap:10px;
+  background:#06C755;color:white;
+  padding:13px 20px;border-radius:50px;
+  text-decoration:none;font-family:'M PLUS Rounded 1c',sans-serif;
+  font-size:14px;font-weight:700;
+  box-shadow:0 6px 24px rgba(6,199,85,0.45);
+  transition:transform .25s,box-shadow .25s;
+  animation:floatIn .6s ease both;
+}
 .line-float:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 32px rgba(6,199,85,0.5);}
 .line-float-icon{width:24px;height:24px;flex-shrink:0;}
 @keyframes floatIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:860px){.line-float{padding:12px 16px;font-size:13px;bottom:20px;right:16px;}}
+@media(max-width:860px){
+  .line-float{padding:12px 16px;font-size:13px;bottom:20px;right:16px;}
+}
 </style>
+
 <a href="https://lin.ee/sb6gOrZ" target="_blank" rel="noopener" class="line-float">
-  <svg class="line-float-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.02 2 11c0 3.53 2.06 6.62 5.14 8.41L6 22l3.09-1.61C10 20.77 11 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2zm1 13H8v-1.5h5V15zm2-3H8v-1.5h7V12zm0-3H8V7.5h7V9z"/></svg>
+  <svg class="line-float-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.48 2 2 6.02 2 11c0 3.53 2.06 6.62 5.14 8.41L6 22l3.09-1.61C10 20.77 11 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2zm1 13H8v-1.5h5V15zm2-3H8v-1.5h7V12zm0-3H8V7.5h7V9z"/>
+  </svg>
   まずはLINEで無料相談する
 </a>
-</document-content>
+
+</body>
+</html>
