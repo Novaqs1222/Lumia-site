@@ -549,39 +549,37 @@ footer{background:var(--txt);padding:52px 0 28px;border-top:4px solid var(--sky)
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">
-    <img src="https://raw.githubusercontent.com/Novaqs1222/Lumia-site/main/Logo.PNG" alt="LUMIA">
-    <div><span class="nav-logo-text">LUMIA</span><span class="nav-logo-sub">ルミア</span></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">サービス</a></li>
-    <li><a href="#monitor">モニター募集</a></li>
-    <li><a href="#pricing">料金</a></li>
-    <li><a href="#crowdfunding">クラファン</a></li>
-    <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
-  </ul>
-</nav>
-
 <!-- HERO -->
-<div style="padding-top:68px;">
-  <!-- BANNER -->
-  <div class="banner-wrap">
+<div>
+  <!-- BANNER with logo overlay -->
+  <div class="banner-wrap" style="position:relative;">
     <img src="https://raw.githubusercontent.com/Novaqs1222/Lumia-site/main/banner.PNG" alt="一人じゃない。未来は、変えられる。">
+    <!-- Logo top-left overlay -->
+    <div style="position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:9px;background:rgba(255,255,255,0.18);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:7px 14px 7px 7px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.32);box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+      <img src="https://raw.githubusercontent.com/Novaqs1222/Lumia-site/main/Logo.PNG" alt="LUMIA" style="width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 28%;transform:scale(1.35);">
+      <div>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:white;letter-spacing:.14em;text-shadow:0 1px 4px rgba(0,0,0,0.25);display:block;line-height:1;">LUMIA</span>
+        <span style="font-size:8.5px;color:rgba(255,220,100,0.95);letter-spacing:.2em;display:block;margin-top:2px;text-shadow:0 1px 3px rgba(0,0,0,0.2);">ルミア</span>
+      </div>
+    </div>
+    <!-- CTA buttons overlay -->
+    <div style="position:absolute;bottom:20px;left:0;right:0;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:0 20px;">
+      <a href="#monitor" class="btn-sun">✦ モニター募集中</a>
+      <a href="https://for-good.net/project/1003634" target="_blank" rel="noopener" class="btn-main">クラファンを応援する →</a>
+    </div>
   </div>
 
-  <div class="hero" style="padding-top:0;">
+  <!-- HERO CONTENT -->
+  <div class="hero">
     <div class="b1 blob"></div>
     <div class="b2 blob"></div>
     <div class="b3 blob"></div>
     <div id="sparkles-hero"></div>
-
     <div class="hero-content">
       <div class="hero-badge"><div class="hero-badge-dot"></div>不登校の子どもたちとそのご家族に、未来への光を。</div>
       <h1 class="hero-h1">
         <span class="h1-line1">その子らしさから、</span><br>
-        <span class="h1-line2">未来は<span class="h1-gold">hajimaru。</span></span>
+        <span class="h1-line2">未来は、<span class="h1-gold">はじまる。</span></span>
       </h1>
       <p class="hero-sub">不登校のお子さまとご家庭を支える新しいオンライン型成長支援サービス「Lumia（ルミア）」。子ども・親・環境を同時に整え、一人ひとりに寄り添いながら共に歩みます。</p>
       <div class="hero-btns">
