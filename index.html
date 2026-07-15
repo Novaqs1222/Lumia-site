@@ -175,8 +175,8 @@ section{padding:80px 0;}
 .pi-action{background:linear-gradient(135deg,#fdf0d0,#f8e0a0);}
 .pi-interest{background:linear-gradient(135deg,#d8f4ec,#b8ead8);}
 .pi-future{background:linear-gradient(135deg,#e8e0f8,#d0c8f0);}
-.pillar-card h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:700;color:var(--txt);margin-bottom:2px;}
-.pillar-en{font-family:'Cormorant Garamond',serif;font-size:11px;color:var(--sky);letter-spacing:.18em;display:block;margin-bottom:5px;}
+.pillar-card h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:700;color:var(--txt);margin-bottom:2px;display:flex;align-items:baseline;gap:8px;}
+.pillar-en{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--sky);letter-spacing:.15em;}
 .pillar-card p{font-size:13px;color:var(--mid);line-height:1.85;}
 
 /* ===== SERVICE ===== */
@@ -448,10 +448,10 @@ footer{background:var(--txt);padding:48px 0 24px;border-top:3px solid var(--sky)
       <p class="sec-desc">生活・行動・興味・将来の4軸から段階的に支援。無理に学校復帰を目指すのではなく、その子なりの成長ルートを設計します。</p>
     </div>
     <div class="pillars-grid">
-      <div class="pillar-card reveal"><div class="pillar-icon pi-life"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 22V11L12 3l9 8v11" stroke="#2472a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="15" width="6" height="7" rx="1" stroke="#2472a8" stroke-width="1.8"/></svg></div><div><h3>生活</h3><span class="pillar-en">Life</span><p>睡眠・食事・日中の過ごし方を見直し、安心できる日常を取り戻します</p></div></div>
-      <div class="pillar-card reveal"><div class="pillar-icon pi-action"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="4.5" stroke="#c49020" stroke-width="1.8"/><path d="M6 22c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="#c49020" stroke-width="1.8" stroke-linecap="round"/><path d="M17 4l3-2M7 4L4 2" stroke="#c49020" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><h3>行動</h3><span class="pillar-en">Action</span><p>小さな行動を積み重ね、成功体験と自己肯定感を少しずつ育てます</p></div></div>
-      <div class="pillar-card reveal"><div class="pillar-icon pi-interest"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6" stroke="#3a9a7a" stroke-width="1.8"/><path d="M15 15l5 5" stroke="#3a9a7a" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><h3>興味</h3><span class="pillar-en">Interest</span><p>好き・得意を見つけ、やりたいという気持ちを引き出す支援をします</p></div></div>
-      <div class="pillar-card reveal"><div class="pillar-icon pi-future"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="#7a60d0" stroke-width="1.8" stroke-linejoin="round"/></svg></div><div><h3>将来</h3><span class="pillar-en">Future</span><p>進学・働き方・生き方など、一人ひとりに合った未来を一緒に考えます</p></div></div>
+      <div class="pillar-card reveal"><div class="pillar-icon pi-life"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 22V11L12 3l9 8v11" stroke="#2472a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="15" width="6" height="7" rx="1" stroke="#2472a8" stroke-width="1.8"/></svg></div><div><h3>生活<span class="pillar-en">Life</span></h3><p>睡眠・食事・日中の過ごし方を見直し、安心できる日常を取り戻します</p></div></div>
+      <div class="pillar-card reveal"><div class="pillar-icon pi-action"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="4.5" stroke="#c49020" stroke-width="1.8"/><path d="M6 22c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="#c49020" stroke-width="1.8" stroke-linecap="round"/><path d="M17 4l3-2M7 4L4 2" stroke="#c49020" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><h3>行動<span class="pillar-en">Action</span></h3><p>小さな行動を積み重ね、成功体験と自己肯定感を少しずつ育てます</p></div></div>
+      <div class="pillar-card reveal"><div class="pillar-icon pi-interest"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6" stroke="#3a9a7a" stroke-width="1.8"/><path d="M15 15l5 5" stroke="#3a9a7a" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><h3>興味<span class="pillar-en">Interest</span></h3><p>好き・得意を見つけ、やりたいという気持ちを引き出す支援をします</p></div></div>
+      <div class="pillar-card reveal"><div class="pillar-icon pi-future"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="#7a60d0" stroke-width="1.8" stroke-linejoin="round"/></svg></div><div><h3>将来<span class="pillar-en">Future</span></h3><p>進学・働き方・生き方など、一人ひとりに合った未来を一緒に考えます</p></div></div>
     </div>
   </div>
 </section>
